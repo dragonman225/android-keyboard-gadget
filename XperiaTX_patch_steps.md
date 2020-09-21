@@ -3,6 +3,8 @@
 ## Compiling Kernel
 
 * I use kernel from Lineage OS repository. The kernel version is `3.4.113` (Oct., 2017).
+  * Repo : https://github.com/LineageOS/android_kernel_sony_msm8x60
+  * Commit : `6fd23f41f7babaf8d3c0c57709f14fecd47a5ec2`
 * Make a new directory, download `kernel-3.4.patch` to the directory.
 * `cd` into the directory, launch following commands.
 ```
@@ -47,7 +49,7 @@ Find the line `/* Free uneeded configurations if exists */`, add the below code 
 ```
 /* HID driver always enabled, it's the whole point of this kernel patch */
 android_enable_function(dev, conf, "hid");
-``` 
+```
 That's all. Save the file, then launch the following commands.
 ```
 make blue_hayabusa_defconfig
